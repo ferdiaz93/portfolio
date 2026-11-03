@@ -322,7 +322,6 @@ html[lang="en"] .lang-toggle [data-lang="en"] {
 /* ---------- About ---------- */
 .about {
   padding: clamp(24px, 5vw, 48px);
-  max-width: 820px;
 }
 
 .about__title {

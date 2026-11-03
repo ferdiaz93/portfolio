@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="es" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fernando Díaz · Desarrollador Fullstack</title>
+  <meta name="description" content="Portfolio de Fernando Díaz, desarrollador fullstack Sr. web y mobile (React Native, TypeScript, Expo) en Buenos Aires.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="bg-glow" aria-hidden="true">
+    <span class="blob blob--1"></span>
+    <span class="blob blob--2"></span>
+    <span class="blob blob--3"></span>
+  </div>
+
+  <header class="nav">
+    <div class="nav__inner container">
+      <a href="#top" class="nav__logo">FERNAND<span>O</span></a>
+      <nav class="nav__menu" id="nav-menu">
+        <a href="#about" data-i18n="nav.about">Sobre mí</a>
+        <a href="#experience" data-i18n="nav.experience">Experiencia</a>
+        <a href="#projects" data-i18n="nav.projects">Proyectos</a>
+        <a href="#contact" data-i18n="nav.contact">Contacto</a>
+      </nav>
+      <div class="nav__actions">
+        <button class="lang-toggle" id="lang-toggle" type="button" aria-label="Cambiar idioma / Change language">
+          <span data-lang="es">ES</span><span data-lang="en">EN</span>
+        </button>
+        <button class="nav__burger" id="nav-burger" type="button" aria-label="Menú" aria-controls="nav-menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero container">
+      <p class="hero__hello reveal" data-i18n="hero.hello">Hola 👋, soy <strong>Fernando</strong></p>
+      <h1 class="hero__title reveal">
+        <span class="hero__line" data-i18n="hero.line1">Desarrollador</span>
+        <span class="hero__line hero__line--outline" data-i18n="hero.line2"><b>F</b>ullstack <b>S</b>r.</span>
+      </h1>
+      <p class="hero__sub reveal" data-i18n="hero.sub">Web &amp; Mobile · React Native · TypeScript</p>
+      <div class="hero__cta reveal">
+        <a href="#experience" class="btn btn--primary" data-i18n="hero.cta">Ver mi trabajo →</a>
+        <a href="assets/Fernando-Diaz-CV.pdf" class="btn btn--ghost" download data-i18n="hero.cv">Descargar CV</a>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section container" id="about">
+      <article class="glass about reveal">
+        <p class="eyebrow" data-i18n="about.eyebrow">Sobre mí</p>
+        <h2 class="about__title" data-i18n="about.title">Soy Desarrollador Fullstack</h2>
+        <p class="about__subtitle" data-i18n="about.subtitle">Con más de 7 años de experiencia</p>
+        <p class="about__text" data-i18n="about.text">Desarrollador fullstack con más de 7 años de experiencia en proyectos web y mobile, casi 5 de ellos construyendo apps con React Native y TypeScript. Hoy soy referente técnico frontend y mobile en HitOcean, donde además acompaño a quienes recién ingresan. Trabajo las apps de punta a punta: arquitectura, manejo de estado, integración con APIs, builds con Expo/EAS y publicación en App Store y Google Play.</p>
+        <ul class="about__facts">
+          <li><span>📍</span> Buenos Aires, Argentina</li>
+          <li><span>💬</span> <span data-i18n="about.langs">Español nativo · Inglés B1</span></li>
+          <li><span>📱</span> <span data-i18n="about.stores">Apps publicadas en App Store y Google Play</span></li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section container skills">
+      <h2 class="section__title reveal" data-i18n="skills.title">Mi <span class="accent">stack</span> incluye...</h2>
+      <ul class="skills__icons reveal" aria-label="Tecnologías">
+        <li title="React Native"><img src="https://cdn.jsdelivr.net/npm/devicon@2.17.0/icons/react/react-original.svg" alt="React Native" loading="lazy"></li>
+        <li title="Expo"><img class="invert" src="https://cdn.jsdelivr.net/npm/devicon@2.17.0/icons/expo/expo-original.svg" alt="Expo" loading="lazy"></li>
+        <li title="TypeScript"><img src="https://cdn.jsdelivr.net/npm/devicon@2.17.0/icons/typescript/typescript-original.svg" alt="TypeScript" loading="lazy"></li>
+        <li title="JavaScript"><img src="https://cdn.jsdelivr.net/npm/devicon@2.17.0/icons/javascript/javascript-original.svg" alt="JavaScript" loading="lazy"></li>
+        <li title="Next.js"><img class="invert" src="https://cdn.jsdelivr.net/npm/devicon@2.17.0/icons/nextjs/nextjs-original.svg" alt="Next.js" loading="lazy"></li>
+        <li title="Node.js"><img src="https://cdn.jsdelivr.net/npm/devicon@2.17.0/icons/nodejs/nodejs-original.svg" alt="Node.js" loading="lazy"></li>
+        <li title="Redux"><img src="https://cdn.jsdelivr.net/npm/devicon@2.17.0/icons/redux/redux-original.svg" alt="Redux" loading="lazy"></li>
+        <li title="Angular"><img src="https://cdn.jsdelivr.net/npm/devicon@2.17.0/icons/angularjs/angularjs-original.svg" alt="Angular" loading="lazy"></li>
+        <li title="Laravel"><img src="https://cdn.jsdelivr.net/npm/devicon@2.17.0/icons/laravel/laravel-original.svg" alt="Laravel" loading="lazy"></li>
+        <li title="PHP"><img src="https://cdn.jsdelivr.net/npm/devicon@2.17.0/icons/php/php-original.svg" alt="PHP" loading="lazy"></li>
+        <li title="Python"><img src="https://cdn.jsdelivr.net/npm/devicon@2.17.0/icons/python/python-original.svg" alt="Python" loading="lazy"></li>
+        <li title="Django"><img class="invert" src="https://cdn.jsdelivr.net/npm/devicon@2.17.0/icons/django/django-plain.svg" alt="Django" loading="lazy"></li>
+        <li title="MySQL"><img src="https://cdn.jsdelivr.net/npm/devicon@2.17.0/icons/mysql/mysql-original.svg" alt="MySQL" loading="lazy"></li>
+      </ul>
+
+      <div class="skills__groups">
+        <div class="glass skill-group reveal">
+          <h3>Mobile</h3>
+          <ul class="tags"><li>React Native</li><li>Expo</li><li>EAS</li><li>Custom dev clients</li><li>App Store</li><li>Google Play</li></ul>
+        </div>
+        <div class="glass skill-group reveal">
+          <h3 data-i18n="skills.languages">Lenguajes</h3>
+          <ul class="tags"><li>TypeScript</li><li>JavaScript</li><li>HTML</li><li>CSS</li></ul>
+        </div>
+        <div class="glass skill-group reveal">
+          <h3 data-i18n="skills.state">Estado y datos</h3>
+          <ul class="tags"><li>Redux</li><li>Zustand</li><li>Context API</li><li>React Query</li></ul>
+        </div>
+        <div class="glass skill-group reveal">
+          <h3 data-i18n="skills.auth">Autenticación</h3>
+          <ul class="tags"><li>OAuth</li><li data-i18n="skills.social">Login social</li></ul>
+        </div>
+        <div class="glass skill-group reveal">
+          <h3>CI/CD</h3>
+          <ul class="tags"><li data-i18n="skills.pipelines">Pipelines de build y deploy mobile</li></ul>
+        </div>
+        <div class="glass skill-group reveal">
+          <h3 data-i18n="skills.web">Web y backend</h3>
+          <ul class="tags"><li>React</li><li>Next.js</li><li>Node.js</li><li>Angular</li><li>PHP/Laravel</li><li>Python/Django</li><li>MySQL</li></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="section container" id="experience">
+      <p class="eyebrow reveal" data-i18n="exp.eyebrow">Experiencia profesional</p>
+      <ol class="timeline">
+        <li class="glass job reveal">
+          <header class="job__head">
+            <div>
+              <h3 class="job__role">Fullstack Sr. <span class="job__company">— HitOcean</span></h3>
+            </div>
+            <span class="job__date" data-i18n="exp.hitocean.date">Feb 2024 – Presente</span>
+          </header>
+          <ul class="job__bullets" data-i18n="exp.hitocean.bullets">
+            <li>Referente técnico frontend y mobile en proyectos web y mobile.</li>
+            <li>Desarrollo de apps mobile con React Native, Expo y TypeScript, desde la arquitectura hasta la publicación en tiendas.</li>
+            <li>Manejo de datos del servidor y caché con React Query.</li>
+            <li>Implementación de login con OAuth y pipelines de CI/CD con EAS.</li>
+            <li>Participación actual en la migración de una aplicación de React (web) a React Native.</li>
+            <li>Mentoría y acompañamiento técnico de nuevos ingresantes.</li>
+            <li>Desarrollo backend con PHP y Laravel.</li>
+          </ul>
+          <ul class="tags"><li>React Native</li><li>Expo</li><li>TypeScript</li><li>React Query</li><li>OAuth</li><li>EAS</li><li>Laravel</li></ul>
+        </li>
+
+        <li class="glass job reveal">
+          <header class="job__head">
+            <h3 class="job__role">Fullstack Ssr. <span class="job__company">— BitFlow (freelance)</span></h3>
+            <span class="job__date">Oct 2023 – Mar 2024</span>
+          </header>
+          <ul class="job__bullets" data-i18n="exp.bitflow.bullets">
+            <li>Desarrollo web con React, TypeScript y Node.js.</li>
+          </ul>
+          <ul class="tags"><li>React</li><li>TypeScript</li><li>Node.js</li></ul>
+        </li>
+
+        <li class="glass job reveal">
+          <header class="job__head">
+            <h3 class="job__role">Frontend Ssr. <span class="job__company">— Wisboo</span></h3>
+            <span class="job__date">Sep 2022 – Oct 2023</span>
+          </header>
+          <ul class="job__bullets" data-i18n="exp.wisboo.bullets">
+            <li>Desarrollo web con AngularJS y Next.js.</li>
+          </ul>
+          <ul class="tags"><li>AngularJS</li><li>Next.js</li></ul>
+        </li>
+
+        <li class="glass job reveal">
+          <header class="job__head">
+            <h3 class="job__role">Fullstack <span class="job__company">— Agencia EGO</span></h3>
+            <span class="job__date">Oct 2020 – Sep 2022</span>
+          </header>
+          <ul class="job__bullets" data-i18n="exp.ego.bullets">
+            <li>Desarrollo de apps mobile con React Native y TypeScript.</li>
+            <li>Desarrollo web con React y TypeScript.</li>
+            <li>Manejo de estado global con Redux y Zustand.</li>
+            <li>Backend y CMS con Python, Django y Wagtail.</li>
+          </ul>
+          <ul class="tags"><li>React Native</li><li>React</li><li>Redux</li><li>Zustand</li><li>Django</li><li>Wagtail</li></ul>
+        </li>
+
+        <li class="glass job reveal">
+          <header class="job__head">
+            <h3 class="job__role">Fullstack Jr. <span class="job__company">— mDevz</span></h3>
+            <span class="job__date">Oct 2019 – Oct 2020</span>
+          </header>
+          <ul class="job__bullets" data-i18n="exp.mdevz.bullets">
+            <li>Desarrollo web con JavaScript, Angular, PHP y Laravel.</li>
+          </ul>
+          <ul class="tags"><li>JavaScript</li><li>Angular</li><li>PHP</li><li>Laravel</li></ul>
+        </li>
+      </ol>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section container" id="projects">
+      <p class="eyebrow reveal" data-i18n="projects.eyebrow">Proyectos destacados</p>
+      <div class="projects">
+        <!-- TODO: reemplazar con un proyecto real (imagen, título, descripción, links) -->
+        <article class="glass project reveal">
+          <div class="project__media project__media--1" aria-hidden="true"><span>📱</span></div>
+          <div class="project__body">
+            <h3 data-i18n="projects.p1.title">App mobile (placeholder)</h3>
+            <p data-i18n="projects.p1.desc">Descripción breve del proyecto: problema, tu rol y resultado.</p>
+            <ul class="tags"><li>React Native</li><li>Expo</li><li>TypeScript</li></ul>
+            <div class="project__links">
+              <a href="#" aria-disabled="true">App Store</a>
+              <a href="#" aria-disabled="true">Google Play</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- TODO: reemplazar -->
+        <article class="glass project reveal">
+          <div class="project__media project__media--2" aria-hidden="true"><span>🌐</span></div>
+          <div class="project__body">
+            <h3 data-i18n="projects.p2.title">Plataforma web (placeholder)</h3>
+            <p data-i18n="projects.p2.desc">Descripción breve del proyecto: problema, tu rol y resultado.</p>
+            <ul class="tags"><li>Next.js</li><li>React Query</li><li>Node.js</li></ul>
+            <div class="project__links">
+              <a href="#" aria-disabled="true" data-i18n="projects.demo">Ver demo</a>
+              <a href="#" aria-disabled="true">GitHub</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- TODO: reemplazar -->
+        <article class="glass project reveal">
+          <div class="project__media project__media--3" aria-hidden="true"><span>🔁</span></div>
+          <div class="project__body">
+            <h3 data-i18n="projects.p3.title">Migración React → React Native (placeholder)</h3>
+            <p data-i18n="projects.p3.desc">Descripción breve del proyecto: problema, tu rol y resultado.</p>
+            <ul class="tags"><li>React</li><li>React Native</li><li>EAS</li></ul>
+            <div class="project__links">
+              <a href="#" aria-disabled="true" data-i18n="projects.case">Caso de estudio</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- TODO: reemplazar -->
+        <article class="glass project reveal">
+          <div class="project__media project__media--4" aria-hidden="true"><span>🧩</span></div>
+          <div class="project__body">
+            <h3 data-i18n="projects.p4.title">Backend / CMS (placeholder)</h3>
+            <p data-i18n="projects.p4.desc">Descripción breve del proyecto: problema, tu rol y resultado.</p>
+            <ul class="tags"><li>Laravel</li><li>Django</li><li>MySQL</li></ul>
+            <div class="project__links">
+              <a href="#" aria-disabled="true">GitHub</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section class="section container" id="education">
+      <p class="eyebrow reveal" data-i18n="edu.eyebrow">Educación</p>
+      <div class="education">
+        <div class="glass edu reveal">
+          <h3 data-i18n="edu.davinci.title">Diseño Multimedia <small>(sin terminar)</small></h3>
+          <p>Escuela de Arte Multimedial Da Vinci</p>
+        </div>
+        <div class="glass edu reveal">
+          <h3 data-i18n="edu.courses.title">Desarrollo web</h3>
+          <p data-i18n="edu.courses.desc">Cursos intensivos en Acámica y Comunidad IT (12 meses)</p>
+        </div>
+        <div class="glass edu reveal">
+          <h3 data-i18n="edu.school.title">Perito Mercantil</h3>
+          <p>Escuela de Comercio N.º 12 “Juan XXIII” · 2007 – 2013</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section container contact" id="contact">
+      <h2 class="contact__title reveal" data-i18n="contact.title">¿Qué estás esperando?</h2>
+      <p class="contact__lead reveal" data-i18n="contact.lead">Escribime a</p>
+      <a class="contact__email reveal" href="mailto:fernandodiaz1209@gmail.com">fernandodiaz1209@gmail.com</a>
+      <p class="contact__lead reveal" data-i18n="contact.socials">Conectemos en redes</p>
+      <ul class="socials reveal">
+        <li>
+          <a href="https://github.com/ferdiaz93" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.1c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.7 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5Z"/></svg>
+          </a>
+        </li>
+        <li>
+          <a href="https://linkedin.com/in/fernandodiaz12" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.4 20.5h-3.6v-5.6c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9v5.7H9.3V9h3.4v1.6h.1c.5-.9 1.6-1.8 3.4-1.8 3.6 0 4.3 2.4 4.3 5.5v6.2ZM5.3 7.4a2.1 2.1 0 1 1 0-4.2 2.1 2.1 0 0 1 0 4.2ZM7.1 20.5H3.5V9h3.6v11.5ZM22.2 0H1.8C.8 0 0 .8 0 1.7v20.6c0 .9.8 1.7 1.8 1.7h20.4c1 0 1.8-.8 1.8-1.7V1.7C24 .8 23.2 0 22.2 0Z"/></svg>
+          </a>
+        </li>
+        <li>
+          <a href="https://wa.me/541168387673" target="_blank" rel="noopener" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5 2.5 1 3 .8 3.6.8.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4ZM12 21.8a9.8 9.8 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A9.8 9.8 0 1 1 12 21.8Zm8.4-18.2A11.8 11.8 0 0 0 1.7 17.8L0 24l6.4-1.7A11.8 11.8 0 0 0 24 12c0-3.2-1.2-6.1-3.6-8.4Z"/></svg>
+          </a>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="footer container">
+    <p>© <span id="year">2026</span> Fernando Díaz · <span data-i18n="footer.made">Hecho con HTML, CSS y un poco de JS</span></p>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

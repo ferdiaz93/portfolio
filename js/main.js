@@ -12,7 +12,7 @@
 
     "hero.hello": "Hey 👋, I’m <strong>Fernando</strong>",
     "hero.line1": "Senior Fullstack",
-    "hero.line2": "<b>D</b>eveloper",
+    "hero.line2": "Developer",
     "hero.sub": "Web &amp; Mobile · React Native · TypeScript",
     "hero.cta": "See my work →",
     "hero.cv": "Download CV",
@@ -39,7 +39,6 @@
       "<li>Building mobile apps with React Native, Expo and TypeScript, from architecture to store release.</li>" +
       "<li>Server data and caching with React Query.</li>" +
       "<li>OAuth login and CI/CD pipelines with EAS.</li>" +
-      "<li>Currently migrating a React (web) application to React Native.</li>" +
       "<li>Mentoring and technical onboarding of new hires.</li>" +
       "<li>Backend development with PHP and Laravel.</li>",
     "exp.bitflow.bullets": "<li>Web development with React, TypeScript and Node.js.</li>",

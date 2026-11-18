@@ -1,0 +1,30 @@
+---
+import IdeLayout from "../layouts/IdeLayout.astro";
+---
+
+<IdeLayout route="education">
+  <h2 class="title"><svg class="ic c-pink"><use href="#i-cap" /></svg><span data-i18n="edu.title">Formación &amp; Idiomas</span></h2>
+  <h3 class="subtitle" data-i18n="edu.studies">// Estudios</h3>
+  <div class="cards-grid">
+    <article class="card feature">
+      <span class="feature__icon">💻</span>
+      <div>
+        <h4><span data-i18n="edu.web.title">Desarrollo web</span> <em class="pill" data-i18n="edu.web.pill">12 meses</em></h4>
+        <p data-i18n="edu.web.desc">Cursos intensivos en Acámica y Comunidad IT.</p>
+      </div>
+    </article>
+    <article class="card feature">
+      <span class="feature__icon">🎨</span>
+      <div>
+        <h4><span data-i18n="edu.davinci.title">Diseño Multimedia</span> <em class="pill" data-i18n="edu.davinci.pill">sin terminar</em></h4>
+        <p>Escuela de Arte Multimedial Da Vinci.</p>
+      </div>
+    </article>
+  </div>
+  <h3 class="subtitle" data-i18n="edu.more">// Más</h3>
+  <ul class="list">
+    <li class="list__item"><span class="list__icon">📜</span><div><strong data-i18n="edu.school.title">Perito Mercantil</strong><small>Escuela de Comercio N.º 12 “Juan XXIII” · 2007 – 2013</small></div></li>
+    <li class="list__item"><span class="list__icon">🌐</span><div><strong data-i18n="edu.english.title">Inglés — B1</strong><small>English House · 2008 – 2012</small></div></li>
+    <li class="list__item"><span class="list__icon">💬</span><div><strong data-i18n="edu.spanish.title">Español — nativo</strong><small>Buenos Aires, Argentina</small></div></li>
+  </ul>
+</IdeLayout>

@@ -1,0 +1,45 @@
+---
+import IdeLayout from "../layouts/IdeLayout.astro";
+
+// level: 1 = uso diario, 2 = cómodo, 3 = familiarizado
+const groups = [
+  {
+    title: "Mobile",
+    skills: [["React Native", 1], ["Expo / EAS", 1], ["Custom dev clients", 2], ["App Store", 1], ["Google Play", 1]],
+  },
+  {
+    title: "Frontend & Lenguajes",
+    i18n: "skills.frontend",
+    skills: [["TypeScript", 1], ["JavaScript", 1], ["React", 1], ["Next.js", 2], ["Angular", 3], ["HTML/CSS", 2]],
+  },
+  {
+    title: "Estado, Datos & Auth",
+    i18n: "skills.state",
+    skills: [["React Query", 1], ["Redux", 2], ["Zustand", 2], ["Context API", 2], ["OAuth", 2], ["Login social", 2, "skills.social"]],
+  },
+  {
+    title: "Backend & CI/CD",
+    i18n: "skills.backend",
+    skills: [["Node.js", 2], ["PHP / Laravel", 2], ["Python / Django", 3], ["MySQL", 3], ["CI/CD (EAS)", 2]],
+  },
+] as { title: string; i18n?: string; skills: [string, number, string?][] }[];
+---
+
+<IdeLayout route="skills">
+  <h2 class="title"><svg class="ic c-pink"><use href="#i-zap" /></svg><span data-i18n="skills.title">Habilidades &amp; Tecnologías</span></h2>
+  <div class="cards-grid">
+    {groups.map((g) => (
+      <article class="card">
+        <h3 data-i18n={g.i18n}>{g.title}</h3>
+        <ul class="skills">
+          {g.skills.map(([name, level, i18n]) => <li class={`lv-${level}`} data-i18n={i18n}>{name}</li>)}
+        </ul>
+      </article>
+    ))}
+  </div>
+  <div class="legend">
+    <span class="lv-1" data-i18n="skills.lv1">uso diario</span>
+    <span class="lv-2" data-i18n="skills.lv2">cómodo</span>
+    <span class="lv-3" data-i18n="skills.lv3">familiarizado</span>
+  </div>
+</IdeLayout>

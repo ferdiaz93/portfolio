@@ -1,0 +1,61 @@
+---
+import IdeLayout from "../layouts/IdeLayout.astro";
+
+// `key` links each job to its English translation in src/scripts/main.js.
+const jobs = [
+  {
+    key: "hitocean",
+    date: "Feb 2024 — Presente",
+    role: "Fullstack Sr.",
+    company: "HitOcean",
+    desc: "Referente técnico frontend y mobile en proyectos web y mobile. Desarrollo apps con React Native, Expo y TypeScript, desde la arquitectura hasta la publicación en tiendas. Manejo datos del servidor y caché con React Query, implementé login con OAuth y pipelines de CI/CD con EAS. También acompaño técnicamente a nuevos ingresantes y desarrollo backend con PHP y Laravel.",
+    tags: ["React Native", "Expo", "TypeScript", "React Query", "OAuth", "EAS", "Laravel"],
+  },
+  {
+    key: "bitflow",
+    date: "Oct 2023 — Mar 2024",
+    role: "Fullstack Ssr.",
+    company: "BitFlow (freelance)",
+    desc: "Desarrollo web con React, TypeScript y Node.js.",
+    tags: ["React", "TypeScript", "Node.js"],
+  },
+  {
+    key: "wisboo",
+    date: "Sep 2022 — Oct 2023",
+    role: "Frontend Ssr.",
+    company: "Wisboo",
+    desc: "Desarrollo web con AngularJS y Next.js.",
+    tags: ["AngularJS", "Next.js"],
+  },
+  {
+    key: "ego",
+    date: "Oct 2020 — Sep 2022",
+    role: "Fullstack",
+    company: "Agencia EGO",
+    desc: "Desarrollé apps mobile con React Native y TypeScript, y aplicaciones web con React y TypeScript. Manejé estado global con Redux y Zustand, y construí backend y CMS con Python, Django y Wagtail.",
+    tags: ["React Native", "React", "Redux", "Zustand", "Django", "Wagtail"],
+  },
+  {
+    key: "mdevz",
+    date: "Oct 2019 — Oct 2020",
+    role: "Fullstack Jr.",
+    company: "mDevz",
+    desc: "Desarrollo web con JavaScript, Angular, PHP y Laravel.",
+    tags: ["JavaScript", "Angular", "PHP", "Laravel"],
+  },
+];
+---
+
+<IdeLayout route="work">
+  <h2 class="title"><svg class="ic c-pink"><use href="#i-briefcase" /></svg><span data-i18n="work.title">Experiencia Laboral</span></h2>
+  <ol class="timeline">
+    {jobs.map((job) => (
+      <li class="job">
+        <p class="job__date" data-i18n={`work.${job.key}.date`}>{job.date}</p>
+        <h3 class="job__role">{job.role} <span>@ {job.company}</span></h3>
+        <p class="job__desc" data-i18n={`work.${job.key}.desc`}>{job.desc}</p>
+        <ul class="chips">{job.tags.map((t) => <li>{t}</li>)}</ul>
+      </li>
+    ))}
+  </ol>
+</IdeLayout>

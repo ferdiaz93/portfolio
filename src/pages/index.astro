@@ -1,0 +1,44 @@
+---
+import IdeLayout from "../layouts/IdeLayout.astro";
+import { url } from "../data/routes";
+---
+
+<IdeLayout route="home">
+  <div class="hero">
+    <div class="hero__text">
+      <p class="prompt"><span class="prompt__user">dev@Fernando-portfolio:~/home$</span> <span class="typed" id="typed">whoami</span><span class="cursor">_</span></p>
+      <p class="hero__hello" data-i18n="home.hello">Hola, soy</p>
+      <h1 class="hero__name">Fernando Díaz</h1>
+      <p class="hero__role">// Full-stack Developer Sr.</p>
+      <p class="hero__tagline" data-i18n="home.tagline">Construyo apps web y mobile de punta a punta con React Native, TypeScript y Expo, desde la arquitectura hasta la publicación en las tiendas.</p>
+      <ul class="badges">
+        <li>// React Native</li>
+        <li>// TypeScript</li>
+        <li>// Expo / EAS</li>
+        <li>// React / Next.js</li>
+        <li>// Node.js / Laravel</li>
+      </ul>
+      <div class="cta">
+        <a class="btn btn--primary" href={url("assets/Fernando-Diaz-CV.pdf")} download data-i18n="home.cv">✦ Descargar CV</a>
+        <a class="btn btn--ghost" href={url("about/")} data-i18n="home.about">→ Sobre mí</a>
+      </div>
+      <ul class="socials">
+        <li><a href="https://github.com/ferdiaz93" target="_blank" rel="noopener"><svg class="ic"><use href="#i-github" /></svg>ferdiaz93</a></li>
+        <li><a href="https://linkedin.com/in/fernandodiaz12" target="_blank" rel="noopener"><svg class="ic"><use href="#i-linkedin" /></svg>Fernando Díaz</a></li>
+      </ul>
+    </div>
+    <div class="hero__art" aria-hidden="true">
+      <!-- Para usar una foto: guardala en public/assets/avatar.png y reemplazá .avatar__face por un img con class="avatar__face" -->
+      <div class="avatar">
+        <div class="avatar__ring"></div>
+        <div class="avatar__face">FD</div>
+        <span class="avatar__spark s1">✦</span>
+        <span class="avatar__spark s2">✧</span>
+        <span class="avatar__spark s3">✦</span>
+        <code class="avatar__chip c1">&lt;App /&gt;</code>
+        <code class="avatar__chip c2">npx expo</code>
+        <code class="avatar__chip c3">{"{ ts }"}</code>
+      </div>
+    </div>
+  </div>
+</IdeLayout>

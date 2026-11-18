@@ -1,0 +1,27 @@
+---
+import IdeLayout from "../layouts/IdeLayout.astro";
+---
+
+<IdeLayout route="about">
+  <h2 class="title"><svg class="ic c-pink"><use href="#i-sparkle" /></svg><span data-i18n="about.title">Sobre Mí</span></h2>
+  <div class="about-grid">
+    <article class="window">
+      <header class="window__bar"><span class="traffic traffic--sm"><span></span><span></span><span></span></span><span class="window__name">bio.md</span></header>
+      <div class="window__body prose" data-i18n="about.bio">
+        <p>Soy desarrollador fullstack de Buenos Aires, Argentina, con más de 7 años de experiencia en proyectos web y mobile, casi 5 de ellos construyendo apps con React Native y TypeScript.</p>
+        <p>Hoy soy referente técnico frontend y mobile en HitOcean, donde además acompaño a quienes recién ingresan al equipo.</p>
+        <p>Trabajo las apps de punta a punta: arquitectura, manejo de estado, integración con APIs, builds con Expo/EAS y publicación en App Store y Google Play.</p>
+      </div>
+    </article>
+    <article class="window">
+      <header class="window__bar"><span class="traffic traffic--sm"><span></span><span></span><span></span></span><span class="window__name">fun_facts.json</span></header>
+      <pre class="window__body code" data-i18n="about.facts"><span class="p">{"{"}</span>
+  <span class="k">"location"</span>: <span class="s">"Buenos Aires, Argentina"</span>,
+  <span class="k">"experience"</span>: <span class="s">"7+ años"</span>,
+  <span class="k">"focus"</span>: [<span class="s">"Mobile"</span>, <span class="s">"Web"</span>],
+  <span class="k">"languages"</span>: [<span class="s">"Español"</span>, <span class="s">"Inglés B1"</span>],
+  <span class="k">"role"</span>: <span class="s">"Referente técnico"</span>,
+<span class="p">{"}"}</span></pre>
+    </article>
+  </div>
+</IdeLayout>

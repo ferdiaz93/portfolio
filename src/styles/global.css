@@ -315,12 +315,23 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 
 .dot { width: 8px; height: 8px; border-radius: 50%; flex: none; }
 
+/* The filename link covers the whole tab; the close link sits above it. */
+.tab__link::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
 .tab__close {
+  position: relative;
+  z-index: 1;
   margin-left: auto;
   opacity: 0;
   font-size: 15px;
   color: var(--text-dim);
 }
+
+.tab__close:hover { color: var(--pink); }
 
 .tab.is-active .tab__close,
 .tab:hover .tab__close { opacity: 1; }
@@ -359,7 +370,6 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 }
 
 .view { max-width: 960px; animation: fade-in 0.5s ease both; }
-.view[hidden] { display: none; }
 
 @keyframes fade-in {
   from { opacity: 0; transform: translateY(10px); }
@@ -817,7 +827,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 .list__item small { color: var(--text-dim); font-size: 0.82rem; }
 
 /* ---------- Contact ---------- */
-.view#view-contact .window { max-width: 720px; }
+.contact-window { max-width: 720px; }
 
 .contact-mail {
   justify-self: start;

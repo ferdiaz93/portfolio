@@ -1,0 +1,129 @@
+---
+import Icons from "../components/Icons.astro";
+import { routes, url, type RouteKey } from "../data/routes";
+import "../styles/global.css";
+
+interface Props {
+  route: RouteKey;
+}
+
+const { route } = Astro.props;
+const current = routes.find((r) => r.key === route)!;
+const pageTitle = route === "home" ? "Fernando Díaz — portfolio" : `${current.file} · Fernando Díaz`;
+---
+
+<!doctype html>
+<html lang="es" data-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{pageTitle}</title>
+    <meta name="description" content="Portfolio de Fernando Díaz, desarrollador fullstack Sr. web y mobile (React Native, TypeScript, Expo) en Buenos Aires." />
+    <link rel="icon" href={url("assets/favicon.svg")} type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Nunito:wght@400;600;700&family=Pixelify+Sans:wght@500;700&display=swap" rel="stylesheet" />
+    <script is:inline>
+      // Apply the saved theme before first paint to avoid a flash.
+      try { const t = localStorage.getItem("theme"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+    </script>
+  </head>
+  <body>
+    <Icons />
+
+    <div class="particles" id="particles" aria-hidden="true"></div>
+
+    <div class="ide">
+      <!-- Title bar -->
+      <header class="titlebar">
+        <div class="traffic" aria-hidden="true"><span></span><span></span><span></span></div>
+        <div class="titlebar__logo" aria-hidden="true">💜</div>
+        <div class="titlebar__actions">
+          <button class="icon-btn" id="theme-toggle" type="button" aria-label="Cambiar tema / Toggle theme">
+            <svg class="ic"><use href="#i-sun" /></svg>
+          </button>
+          <div class="lang" role="group" aria-label="Idioma / Language">
+            <button type="button" data-set-lang="es">ES</button><span>/</span><button type="button" data-set-lang="en">EN</button>
+          </div>
+        </div>
+      </header>
+
+      <div class="workbench">
+        <!-- Activity bar -->
+        <nav class="activity" aria-hidden="true">
+          <span class="activity__item is-active"><svg class="ic"><use href="#i-files" /></svg></span>
+          <span class="activity__item"><svg class="ic"><use href="#i-search" /></svg></span>
+          <span class="activity__item"><svg class="ic"><use href="#i-git" /></svg></span>
+          <span class="activity__item"><svg class="ic"><use href="#i-tag" /></svg></span>
+          <span class="activity__item activity__item--bottom"><svg class="ic"><use href="#i-gear" /></svg></span>
+        </nav>
+
+        <!-- Explorer -->
+        <aside class="sidebar">
+          <p class="sidebar__title" data-i18n="explorer">Explorador</p>
+          <div class="tree">
+            <div class="tree__folder"><svg class="ic ic--chev open"><use href="#i-chevron" /></svg><svg class="ic c-yellow"><use href="#i-folder" /></svg>fernando-portfolio</div>
+            {routes.map((r) => (
+              <a class:list={["tree__file", { "is-active": r.key === route }]} href={url(r.path)}>
+                <svg class={`ic c-${r.color}`}><use href={`#i-${r.icon}`} /></svg>{r.file}
+              </a>
+            ))}
+            <div class="tree__folder tree__folder--muted"><svg class="ic ic--chev"><use href="#i-chevron" /></svg><svg class="ic"><use href="#i-folder" /></svg>node_modules</div>
+          </div>
+        </aside>
+
+        <!-- Editor -->
+        <main class="editor">
+          <nav class="tabbar" aria-label="Secciones">
+            {routes.map((r) => (
+              <div class:list={["tab", { "is-active": r.key === route }]}>
+                <i class={`dot bg-${r.color}`}></i>
+                <a class="tab__link" href={url(r.path)}>{r.file}</a>
+                {/* Closing a tab falls back to home, like an editor reopening the first file. */}
+                <a class="tab__close" href={url("")} aria-label="Cerrar" tabindex="-1">×</a>
+              </div>
+            ))}
+          </nav>
+
+          <div class="scroll" id="scroll">
+            <div class="gutter" id="gutter" aria-hidden="true"></div>
+            <div class="content" id="content">
+              <section class:list={["view", { "view--home": route === "home" }]}>
+                <slot />
+              </section>
+            </div>
+          </div>
+        </main>
+      </div>
+
+      <!-- Status bar -->
+      <footer class="statusbar">
+        <div class="statusbar__group">
+          <span>🌿 main</span>
+          <span>✓ <span data-i18n="status.errors">0 errores</span></span>
+          <span class="hide-sm">⚡ TypeScript 5.3</span>
+          <span class="hide-sm">💜 Violet Theme</span>
+        </div>
+        <div class="statusbar__group">
+          <span class="hide-sm">UTF-8</span>
+          <span>{current.lang}</span>
+          <span class="hide-sm">Ln 2, Col 1</span>
+          <span>♡ Fernando</span>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Mobile nav -->
+    <nav class="mobile-nav" aria-label="Secciones">
+      {routes.map((r) => (
+        <a class:list={{ "is-active": r.key === route }} href={url(r.path)}>
+          <svg class="ic"><use href={`#i-${r.icon}`} /></svg><span>{r.label}</span>
+        </a>
+      ))}
+    </nav>
+
+    <script>
+      import "../scripts/main.js";
+    </script>
+  </body>
+</html>

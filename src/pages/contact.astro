@@ -1,0 +1,18 @@
+---
+import IdeLayout from "../layouts/IdeLayout.astro";
+---
+
+<IdeLayout route="contact">
+  <h2 class="title"><svg class="ic c-pink"><use href="#i-mail" /></svg><span data-i18n="contact.title">Hablemos</span></h2>
+  <article class="window contact-window">
+    <header class="window__bar"><span class="traffic traffic--sm"><span></span><span></span><span></span></span><span class="window__name">contact.md</span></header>
+    <div class="window__body prose">
+      <p data-i18n="contact.text">¿Tenés un proyecto web o mobile en mente, o querés sumarme a tu equipo? Escribime y lo charlamos.</p>
+      <a class="contact-mail" href="mailto:fernandodiaz1209@gmail.com">fernandodiaz1209@gmail.com</a>
+      <ul class="socials">
+        <li><a href="https://github.com/ferdiaz93" target="_blank" rel="noopener"><svg class="ic"><use href="#i-github" /></svg>github.com/ferdiaz93</a></li>
+        <li><a href="https://linkedin.com/in/fernandodiaz12" target="_blank" rel="noopener"><svg class="ic"><use href="#i-linkedin" /></svg>linkedin.com/in/fernandodiaz12</a></li>
+      </ul>
+    </div>
+  </article>
+</IdeLayout>

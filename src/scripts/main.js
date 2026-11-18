@@ -103,36 +103,12 @@
 
   applyThemeIcon();
 
-  // ---------- Router ----------
-  const routes = ["home", "about", "work", "skills", "education", "contact"];
-  const links = document.querySelectorAll("[data-route]");
-  const statusFile = document.getElementById("status-file");
-  const scroll = document.getElementById("scroll");
-
-  function render() {
-    const route = routes.includes(location.hash.slice(1)) ? location.hash.slice(1) : "home";
-    routes.forEach((r) => { document.getElementById("view-" + r).hidden = r !== route; });
-    links.forEach((a) => a.classList.toggle("is-active", a.dataset.route === route));
-    statusFile.textContent = document.getElementById("view-" + route).dataset.file;
-    scroll.scrollTop = 0;
-    window.scrollTo(0, 0);
-    document.querySelector(".tab.is-active")?.scrollIntoView({ block: "nearest", inline: "nearest" });
-    updateGutter();
-    if (route === "home") typeWhoami();
-  }
-
-  window.addEventListener("hashchange", render);
-
-  // Closing the active tab goes back home, like an editor falling back to the first file.
-  document.querySelectorAll(".tab__close").forEach((x) => {
-    x.addEventListener("click", (e) => {
-      e.preventDefault();
-      e.stopPropagation();
-      location.hash = "home";
-    });
-  });
+  // Keep the active tab visible when the tab bar overflows.
+  const activeTab = document.querySelector(".tab.is-active");
+  if (activeTab) activeTab.parentElement.scrollLeft = activeTab.offsetLeft - 48;
 
   // ---------- Line numbers ----------
+  const scroll = document.getElementById("scroll");
   const gutter = document.getElementById("gutter");
   const content = document.getElementById("content");
 
@@ -152,7 +128,7 @@
   let typingTimer;
 
   function typeWhoami() {
-    if (matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    if (!typed || matchMedia("(prefers-reduced-motion: reduce)").matches) return;
     clearInterval(typingTimer);
     const text = "whoami";
     let i = 0;
@@ -204,7 +180,7 @@
   if (urlLang === "es" || urlLang === "en") lang = urlLang;
 
   spawnParticles();
-  render();
+  typeWhoami();
   setLang(lang);
   document.fonts?.ready.then(updateGutter);
 })();
